@@ -80,9 +80,9 @@ const Login = () => {
         <section className="">
           <div className="" style={{width
           :"100%"}}>
-            <h3 className="text-center col-lg-6" style={{width:"100%"}}>Login</h3>
+            <h3 className="text-center col-lg-6 mb-5" style={{width:"100%"}}>Login</h3>
             <Form>
-              <Form.Group className="mb-3 col-lg-6" style={{width:"100%",}} controlId="formBasicEmail">
+              <Form.Group className="mb-4 col-lg-6" style={{width:"100%",}} controlId="formBasicEmail">
                 <Form.Control
                   type="email"
                   name="email"
@@ -93,7 +93,7 @@ const Login = () => {
 
               <Form.Group
               style={{width:"100%"}}
-                className="mb-3 col-lg-6"
+                className="mb-4 col-lg-6"
                 controlId="formBasicPassword"
               >
                 <Form.Control
@@ -104,10 +104,11 @@ const Login = () => {
                 />
               </Form.Group>
               <Button
-                variant="primary"
-                className="col-lg-6"
+                variant=""
+                className="col-lg-6 mb-3 login-button"
                 onClick={addData}
-                style={{ background: "rgb(67, 185, 127)", width:"100%" }}
+                
+                
                 type="submit"
               >
                 Submit

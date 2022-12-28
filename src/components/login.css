@@ -10,3 +10,17 @@
     left: 50%;
     
 }
+
+.login-button{
+    background: #ef4c23; 
+    width:100%; 
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+}
+
+
+.login-button:hover{
+    background: white; 
+
+    color: #ef4c23;
+}
