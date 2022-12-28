@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import SIgn_img from "./SIgn_img";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -13,7 +12,7 @@ const Home = () => {
   const [inpval, setInpval] = useState({
     name: "",
     email: "",
-    date: "",
+   
     password: "",
   });
 
@@ -34,10 +33,11 @@ const Home = () => {
     });
   };
 
+
   const addData = (e) => {
     e.preventDefault();
 
-    const { name, email, date, password } = inpval;
+    const { name, email, password } = inpval;
 
     if (name === "") {
       toast.error(" name field is requred!", {
@@ -51,10 +51,10 @@ const Home = () => {
       toast.error("plz enter valid email addres", {
         position: "top-center",
       });
-    } else if (date === "") {
-      toast.error("date field is requred", {
-        position: "top-center",
-      });
+    // } else if (date === "") {
+    //   toast.error("date field is requred", {
+    //     position: "top-center",
+    //   });
     } else if (password === "") {
       toast.error("password field is requred", {
         position: "top-center",
@@ -75,7 +75,7 @@ const Home = () => {
       <div className="container mt-3">
         <section className="d-flex justify-content-between">
           <div className="left_data mt-3 p-3" style={{ width: "100%" }}>
-            <h3 className="text-center col-lg-6">Sign Up</h3>
+            <h3 style={{ width: "100%" }} className="text-center col-lg-6">Sign Up</h3>
             <Form>
               <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
                 <Form.Control
@@ -94,9 +94,9 @@ const Home = () => {
                 />
               </Form.Group>
 
-              <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
+              {/* <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
                 <Form.Control onChange={getdata} name="date" type="date" />
-              </Form.Group>
+              </Form.Group> */}
 
               <Form.Group
                 className="mb-3 col-lg-6"
@@ -126,7 +126,7 @@ const Home = () => {
               </span>{" "}
             </p>
           </div>
-          <SIgn_img />
+          {/* <SIgn_img /> */}
         </section>
         <ToastContainer />
       </div>

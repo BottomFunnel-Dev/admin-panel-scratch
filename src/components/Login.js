@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import SIgn_img from "./SIgn_img";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./login.css"
 
 const Login = () => {
   const history = useNavigate();
@@ -76,12 +76,13 @@ const Login = () => {
 
   return (
     <>
-      <div className="container mt-3">
-        <section className="d-flex justify-content-between">
-          <div className="left_data mt-3 p-3" style={{ width: "100%" }}>
-            <h3 className="text-center col-lg-6">Sign IN</h3>
+      <div className="login-form">
+        <section className="">
+          <div className="" style={{width
+          :"100%"}}>
+            <h3 className="text-center col-lg-6" style={{width:"100%"}}>Login</h3>
             <Form>
-              <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
+              <Form.Group className="mb-3 col-lg-6" style={{width:"100%",}} controlId="formBasicEmail">
                 <Form.Control
                   type="email"
                   name="email"
@@ -91,6 +92,7 @@ const Login = () => {
               </Form.Group>
 
               <Form.Group
+              style={{width:"100%"}}
                 className="mb-3 col-lg-6"
                 controlId="formBasicPassword"
               >
@@ -105,17 +107,16 @@ const Login = () => {
                 variant="primary"
                 className="col-lg-6"
                 onClick={addData}
-                style={{ background: "rgb(67, 185, 127)" }}
+                style={{ background: "rgb(67, 185, 127)", width:"100%" }}
                 type="submit"
               >
                 Submit
               </Button>
             </Form>
-            <p className="mt-3">
+            {/* <p className="mt-3">
               Already Have an Account <span>SignIn</span>{" "}
-            </p>
+            </p> */}
           </div>
-          <SIgn_img />
         </section>
         <ToastContainer />
       </div>

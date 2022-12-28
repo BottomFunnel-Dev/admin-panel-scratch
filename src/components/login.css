@@ -1,0 +1,12 @@
+.login-form{
+    width:30%; 
+    margin:auto; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    padding:20px; 
+    border-radius:10px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    
+}

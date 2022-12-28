@@ -9,17 +9,8 @@ const Header = () => {
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <NavLink to="/" className="text-decoration-none text-light mx-2">
-            User Registration
-          </NavLink>
-          <Nav className="me-auto">
-            <NavLink to="/" className="text-decoration-none text-light mx-2">
-              Home
-            </NavLink>
-            <NavLink to="/" className="text-decoration-none text-light">
-              Features
-            </NavLink>
-          </Nav>
+          <img src="Images/" alt=""/>
+          <p style={{color:"white" , margin:0}}>Welcome to the Bottom Funnel Admin panel</p>
         </Container>
       </Navbar>
     </>
