@@ -38,7 +38,7 @@ const Login = () => {
         <input
           className="inputs_class"
           type="password"
-         placeholder="Enter Password"
+          placeholder="Enter Password"
           onChange={(e) => setLoginPassword(e.target.value)}
         />
         <button className="button_class" onClick={login}>

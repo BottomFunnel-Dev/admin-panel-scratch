@@ -17,7 +17,7 @@ export const Signup = () => {
         registerPassword
       );
       console.log(user);
-      history("/login");
+      history("/");
     } catch (error) {
       console.log(error.message);
     }
