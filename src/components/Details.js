@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Details.css";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
@@ -50,9 +51,11 @@ const Details = () => {
         "errror"
       ) : (
         <>
-          <h1>detials page</h1>
-          <h1>{logindata[0].name}</h1>
-          <Button onClick={userlogout}>LogOut</Button>
+          {/* <h1>detials page</h1> */}
+          <div className="detailsLogoutButtonDiv">
+            <h1>{logindata[0].name}</h1>
+            <Button onClick={userlogout}>LogOut</Button>
+          </div>
 
           {logindata[0].date === todayDate ? (
             <Modal show={show} onHide={handleClose}>

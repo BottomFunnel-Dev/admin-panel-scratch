@@ -1,26 +1,24 @@
-.login-form{
-    width:30%; 
-    margin:auto; 
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
-    padding:20px; 
-    border-radius:10px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    
+.login-form {
+  width: 30%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
-.login-button{
-    background: #ef4c23; 
-    width:100%; 
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+.login-button {
+  background: #ef4c23;
+  width: 100%;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.login-button:hover {
+  background: white;
 
-.login-button:hover{
-    background: white; 
-
-    color: #ef4c23;
+  color: #ef4c23;
 }

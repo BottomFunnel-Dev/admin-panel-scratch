@@ -1,0 +1,7 @@
+.detailsLogoutButtonDiv {
+  border: 1px solid red;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+}
