@@ -1,0 +1,12 @@
+.amdinMainNavParentDiv {
+  /* border: 2px solid red; */
+  position: relative;
+}
+
+.amdinMainNavParentDiv > p {
+  border: 1px solid white;
+}
+
+.adminContainerMainDiv > p {
+    border: 1px solid white;
+}
