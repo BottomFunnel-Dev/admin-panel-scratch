@@ -12,7 +12,6 @@ const Home = () => {
   const [inpval, setInpval] = useState({
     name: "",
     email: "",
-   
     password: "",
   });
 

@@ -19,6 +19,9 @@
 
 .login-button:hover {
   background: white;
+}
 
+.login-button:hover {
+  background: white;
   color: #ef4c23;
 }

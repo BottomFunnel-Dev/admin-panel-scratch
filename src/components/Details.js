@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from "react";
-import "./Details.css";
+import "./details.css";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import "./details.css";
 import { useNavigate } from "react-router-dom";
+import { Dropdown } from "react-bootstrap";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Details = () => {
   const [logindata, setLoginData] = useState([]);
+  const [expand, setexpand] = useState(false);
+
+  const handledrop = () => {
+    expand ? setexpand(false) : setexpand(true);
+  };
 
   const history = useNavigate();
 
@@ -50,34 +58,33 @@ const Details = () => {
       {logindata.length === 0 ? (
         "errror"
       ) : (
-        <>
-          {/* <h1>detials page</h1> */}
-          <div className="detailsLogoutButtonDiv">
-            <h1>{logindata[0].name}</h1>
-            <Button onClick={userlogout}>LogOut</Button>
+        <div>
+          <div className="logout-button">
+            <button onClick={userlogout}>Logout</button>
           </div>
+          <div className="sidenav">
+            <div className="sidenaveItem">Dashboard</div>
+            <div className="sidenaveItem innerside" onClick={handledrop}>
+              <p>Modules</p>
+              <div className="dropImage">
+                <img src="Images/down.png" alt="" />
+              </div>
+            </div>
+            {expand && (
+              <div className="modules">
+                <div className="sidenaveItem">Module 1</div>
+                <div className="sidenaveItem">Module 2</div>
+              </div>
+            )}
 
-          {logindata[0].date === todayDate ? (
-            <Modal show={show} onHide={handleClose}>
-              <Modal.Header closeButton>
-                <Modal.Title>{logindata[0].name} 😄</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                Wish you many many happy returns of the day ! 🍰
-              </Modal.Body>
-              <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                  Close
-                </Button>
-                <Button variant="primary" onClick={handleClose}>
-                  Save Changes
-                </Button>
-              </Modal.Footer>
-            </Modal>
-          ) : (
-            ""
-          )}
-        </>
+            <div className="sidenaveItem">
+              ERP Solutions drop <RiArrowDropDownLine />
+            </div>
+            <div className="sidenaveItem">API Sourcing and </div>
+            <div className="sidenaveItem">Dashboard</div>
+            <div className="sidenaveItem">Dashboard</div>
+          </div>
+        </div>
       )}
     </>
   );
